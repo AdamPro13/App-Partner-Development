@@ -6,8 +6,6 @@
 //  Copyright (c) 2014 Adam Proschek. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
-
-@interface APDViewController : UIViewController
+@interface APDMainViewController : UIViewController
 
 @end

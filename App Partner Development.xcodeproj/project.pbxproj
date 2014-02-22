@@ -14,13 +14,20 @@
 		50443D8218B90CCA00879698 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 50443D8118B90CCA00879698 /* main.m */; };
 		50443D8618B90CCA00879698 /* APDAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 50443D8518B90CCA00879698 /* APDAppDelegate.m */; };
 		50443D8918B90CCA00879698 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 50443D8718B90CCA00879698 /* Main.storyboard */; };
-		50443D8C18B90CCA00879698 /* APDViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 50443D8B18B90CCA00879698 /* APDViewController.m */; };
+		50443D8C18B90CCA00879698 /* APDMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 50443D8B18B90CCA00879698 /* APDMainViewController.m */; };
 		50443D8E18B90CCA00879698 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 50443D8D18B90CCA00879698 /* Images.xcassets */; };
 		50443D9518B90CCA00879698 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50443D9418B90CCA00879698 /* XCTest.framework */; };
 		50443D9618B90CCA00879698 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50443D7518B90CCA00879698 /* Foundation.framework */; };
 		50443D9718B90CCA00879698 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50443D7918B90CCA00879698 /* UIKit.framework */; };
 		50443D9F18B90CCA00879698 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 50443D9D18B90CCA00879698 /* InfoPlist.strings */; };
 		50443DA118B90CCA00879698 /* App_Partner_DevelopmentTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 50443DA018B90CCA00879698 /* App_Partner_DevelopmentTests.m */; };
+		50443DAF18B918FD00879698 /* APDFacebookFriendsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 50443DAE18B918FD00879698 /* APDFacebookFriendsViewController.m */; };
+		50443DB218B9190A00879698 /* APDServerPingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 50443DB118B9190A00879698 /* APDServerPingViewController.m */; };
+		50443DB518B9191200879698 /* APDDanceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 50443DB418B9191200879698 /* APDDanceViewController.m */; };
+		50443E0418B92F1A00879698 /* APDFacebookFriendCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 50443E0318B92F1A00879698 /* APDFacebookFriendCell.m */; };
+		50443E0718B9300700879698 /* APDBaseRequestHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 50443E0618B9300700879698 /* APDBaseRequestHandler.m */; };
+		50443E0B18B932B100879698 /* APDPingRequestHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 50443E0A18B932B100879698 /* APDPingRequestHandler.m */; };
+		F7458F685E4342E3A1DF0CD3 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F88EC4A3B924CA2AD93835D /* libPods.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +41,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		22F5AB62B38A413C8977C6D9 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 		50443D7218B90CCA00879698 /* App Partner Development.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "App Partner Development.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		50443D7518B90CCA00879698 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		50443D7718B90CCA00879698 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -45,14 +53,28 @@
 		50443D8418B90CCA00879698 /* APDAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = APDAppDelegate.h; sourceTree = "<group>"; };
 		50443D8518B90CCA00879698 /* APDAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = APDAppDelegate.m; sourceTree = "<group>"; };
 		50443D8818B90CCA00879698 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		50443D8A18B90CCA00879698 /* APDViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = APDViewController.h; sourceTree = "<group>"; };
-		50443D8B18B90CCA00879698 /* APDViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = APDViewController.m; sourceTree = "<group>"; };
+		50443D8A18B90CCA00879698 /* APDMainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = APDMainViewController.h; sourceTree = "<group>"; };
+		50443D8B18B90CCA00879698 /* APDMainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = APDMainViewController.m; sourceTree = "<group>"; };
 		50443D8D18B90CCA00879698 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		50443D9318B90CCA00879698 /* App Partner DevelopmentTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "App Partner DevelopmentTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		50443D9418B90CCA00879698 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		50443D9C18B90CCA00879698 /* App Partner DevelopmentTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "App Partner DevelopmentTests-Info.plist"; sourceTree = "<group>"; };
 		50443D9E18B90CCA00879698 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		50443DA018B90CCA00879698 /* App_Partner_DevelopmentTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = App_Partner_DevelopmentTests.m; sourceTree = "<group>"; };
+		50443DAD18B918FD00879698 /* APDFacebookFriendsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APDFacebookFriendsViewController.h; sourceTree = "<group>"; };
+		50443DAE18B918FD00879698 /* APDFacebookFriendsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APDFacebookFriendsViewController.m; sourceTree = "<group>"; };
+		50443DB018B9190A00879698 /* APDServerPingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APDServerPingViewController.h; sourceTree = "<group>"; };
+		50443DB118B9190A00879698 /* APDServerPingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APDServerPingViewController.m; sourceTree = "<group>"; };
+		50443DB318B9191200879698 /* APDDanceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APDDanceViewController.h; sourceTree = "<group>"; };
+		50443DB418B9191200879698 /* APDDanceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APDDanceViewController.m; sourceTree = "<group>"; };
+		50443E0218B92F1900879698 /* APDFacebookFriendCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APDFacebookFriendCell.h; sourceTree = "<group>"; };
+		50443E0318B92F1A00879698 /* APDFacebookFriendCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APDFacebookFriendCell.m; sourceTree = "<group>"; };
+		50443E0518B9300700879698 /* APDBaseRequestHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APDBaseRequestHandler.h; sourceTree = "<group>"; };
+		50443E0618B9300700879698 /* APDBaseRequestHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APDBaseRequestHandler.m; sourceTree = "<group>"; };
+		50443E0818B9304100879698 /* APDRequestDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = APDRequestDelegate.h; sourceTree = "<group>"; };
+		50443E0918B932B100879698 /* APDPingRequestHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APDPingRequestHandler.h; sourceTree = "<group>"; };
+		50443E0A18B932B100879698 /* APDPingRequestHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APDPingRequestHandler.m; sourceTree = "<group>"; };
+		9F88EC4A3B924CA2AD93835D /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +85,7 @@
 				50443D7818B90CCA00879698 /* CoreGraphics.framework in Frameworks */,
 				50443D7A18B90CCA00879698 /* UIKit.framework in Frameworks */,
 				50443D7618B90CCA00879698 /* Foundation.framework in Frameworks */,
+				F7458F685E4342E3A1DF0CD3 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -86,6 +109,7 @@
 				50443D9A18B90CCA00879698 /* App Partner DevelopmentTests */,
 				50443D7418B90CCA00879698 /* Frameworks */,
 				50443D7318B90CCA00879698 /* Products */,
+				22F5AB62B38A413C8977C6D9 /* Pods.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -105,6 +129,7 @@
 				50443D7718B90CCA00879698 /* CoreGraphics.framework */,
 				50443D7918B90CCA00879698 /* UIKit.framework */,
 				50443D9418B90CCA00879698 /* XCTest.framework */,
+				9F88EC4A3B924CA2AD93835D /* libPods.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -115,8 +140,12 @@
 				50443D8418B90CCA00879698 /* APDAppDelegate.h */,
 				50443D8518B90CCA00879698 /* APDAppDelegate.m */,
 				50443D8718B90CCA00879698 /* Main.storyboard */,
-				50443D8A18B90CCA00879698 /* APDViewController.h */,
-				50443D8B18B90CCA00879698 /* APDViewController.m */,
+				50443D8A18B90CCA00879698 /* APDMainViewController.h */,
+				50443D8B18B90CCA00879698 /* APDMainViewController.m */,
+				50443E0C18B936F800879698 /* Request Handlers */,
+				50443DB718B9192000879698 /* Facebook */,
+				50443DB818B9192900879698 /* Server Ping */,
+				50443DB618B9191600879698 /* Dance */,
 				50443D8D18B90CCA00879698 /* Images.xcassets */,
 				50443D7C18B90CCA00879698 /* Supporting Files */,
 			);
@@ -152,6 +181,47 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		50443DB618B9191600879698 /* Dance */ = {
+			isa = PBXGroup;
+			children = (
+				50443DB318B9191200879698 /* APDDanceViewController.h */,
+				50443DB418B9191200879698 /* APDDanceViewController.m */,
+			);
+			name = Dance;
+			sourceTree = "<group>";
+		};
+		50443DB718B9192000879698 /* Facebook */ = {
+			isa = PBXGroup;
+			children = (
+				50443DAD18B918FD00879698 /* APDFacebookFriendsViewController.h */,
+				50443DAE18B918FD00879698 /* APDFacebookFriendsViewController.m */,
+				50443E0218B92F1900879698 /* APDFacebookFriendCell.h */,
+				50443E0318B92F1A00879698 /* APDFacebookFriendCell.m */,
+			);
+			name = Facebook;
+			sourceTree = "<group>";
+		};
+		50443DB818B9192900879698 /* Server Ping */ = {
+			isa = PBXGroup;
+			children = (
+				50443DB018B9190A00879698 /* APDServerPingViewController.h */,
+				50443DB118B9190A00879698 /* APDServerPingViewController.m */,
+			);
+			name = "Server Ping";
+			sourceTree = "<group>";
+		};
+		50443E0C18B936F800879698 /* Request Handlers */ = {
+			isa = PBXGroup;
+			children = (
+				50443E0818B9304100879698 /* APDRequestDelegate.h */,
+				50443E0518B9300700879698 /* APDBaseRequestHandler.h */,
+				50443E0618B9300700879698 /* APDBaseRequestHandler.m */,
+				50443E0918B932B100879698 /* APDPingRequestHandler.h */,
+				50443E0A18B932B100879698 /* APDPingRequestHandler.m */,
+			);
+			name = "Request Handlers";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -159,9 +229,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 50443DA418B90CCA00879698 /* Build configuration list for PBXNativeTarget "App Partner Development" */;
 			buildPhases = (
+				F1F0CA5E8F9146C3B7B1B219 /* Check Pods Manifest.lock */,
 				50443D6E18B90CCA00879698 /* Sources */,
 				50443D6F18B90CCA00879698 /* Frameworks */,
 				50443D7018B90CCA00879698 /* Resources */,
+				6CAFACA9C03149B5A24C1177 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -245,13 +317,52 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		6CAFACA9C03149B5A24C1177 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F1F0CA5E8F9146C3B7B1B219 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		50443D6E18B90CCA00879698 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				50443D8618B90CCA00879698 /* APDAppDelegate.m in Sources */,
-				50443D8C18B90CCA00879698 /* APDViewController.m in Sources */,
+				50443E0718B9300700879698 /* APDBaseRequestHandler.m in Sources */,
+				50443D8C18B90CCA00879698 /* APDMainViewController.m in Sources */,
+				50443DB218B9190A00879698 /* APDServerPingViewController.m in Sources */,
+				50443DAF18B918FD00879698 /* APDFacebookFriendsViewController.m in Sources */,
+				50443DB518B9191200879698 /* APDDanceViewController.m in Sources */,
+				50443E0B18B932B100879698 /* APDPingRequestHandler.m in Sources */,
+				50443E0418B92F1A00879698 /* APDFacebookFriendCell.m in Sources */,
 				50443D8218B90CCA00879698 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -376,6 +487,7 @@
 		};
 		50443DA518B90CCA00879698 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 22F5AB62B38A413C8977C6D9 /* Pods.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -389,6 +501,7 @@
 		};
 		50443DA618B90CCA00879698 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 22F5AB62B38A413C8977C6D9 /* Pods.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -461,6 +574,7 @@
 				50443DA618B90CCA00879698 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		50443DA718B90CCA00879698 /* Build configuration list for PBXNativeTarget "App Partner DevelopmentTests" */ = {
 			isa = XCConfigurationList;
@@ -469,6 +583,7 @@
 				50443DA918B90CCA00879698 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

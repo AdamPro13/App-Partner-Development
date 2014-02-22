@@ -1,23 +1,253 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4451" systemVersion="13A461" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4514" systemVersion="13B3116" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="pgV-OZ-q87">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3676"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3747"/>
     </dependencies>
     <scenes>
-        <!--class Prefix:identifier View Controller-->
+        <!--Main View Controller - Main Menu-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="APDViewController" sceneMemberID="viewController">
+                <viewController id="vXZ-lx-hvc" customClass="APDMainViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="hfQ-84-G52"/>
+                        <viewControllerLayoutGuide type="bottom" id="kYM-hJ-R5a"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="frame_buttons" translatesAutoresizingMaskIntoConstraints="NO" id="KOO-1v-cgX">
+                                <rect key="frame" x="9" y="101" width="302" height="366"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="logo_small" translatesAutoresizingMaskIntoConstraints="NO" id="qfJ-7Y-MfR">
+                                <rect key="frame" x="59" y="127" width="203" height="51"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="37D-nZ-mRL">
+                                <rect key="frame" x="48" y="277" width="225" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="button_facebook_friends_off">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="selected" image="button_facebook_friends_on"/>
+                                <connections>
+                                    <segue destination="buw-Jm-YaC" kind="push" identifier="FacebookSegue" id="O9W-Es-x9z"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="moy-47-XNg">
+                                <rect key="frame" x="48" y="336" width="225" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="button_serverping_off">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="selected" image="button_serverping_on"/>
+                                <connections>
+                                    <segue destination="2U4-zM-Eec" kind="push" identifier="ServerPingSegue" id="TDC-0R-FUV"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U2q-P5-aKv">
+                                <rect key="frame" x="48" y="394" width="225" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="button_dance_off">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="selected" image="button_dance_on"/>
+                                <connections>
+                                    <segue destination="Cs1-DB-QV8" kind="push" identifier="DanceSegue" id="MT2-fp-XFw"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Main Menu" id="s5I-mL-SHd"/>
+                    <connections>
+                        <outlet property="appPartnerImageView" destination="qfJ-7Y-MfR" id="Uty-cF-fDb"/>
+                        <outlet property="frameImageView" destination="KOO-1v-cgX" id="iYE-y5-48u"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="709" y="107"/>
+        </scene>
+        <!--Dance View Controller-->
+        <scene sceneID="OD7-hU-y1f">
+            <objects>
+                <viewController id="Cs1-DB-QV8" customClass="APDDanceViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="nMV-tR-yfs"/>
+                        <viewControllerLayoutGuide type="bottom" id="8AU-fV-VwO"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="j9f-wb-ueS">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="frame_buttons" translatesAutoresizingMaskIntoConstraints="NO" id="vPO-t4-dJ9">
+                                <rect key="frame" x="9" y="101" width="302" height="366"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZAf-rA-DXm">
+                                <rect key="frame" x="20" y="411" width="278" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="button_dance_off">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="selected" image="button_dance_on"/>
+                                <connections>
+                                    <action selector="danceButtonPressed:" destination="Cs1-DB-QV8" eventType="touchUpInside" id="TvX-rC-pog"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="45z-X5-ADr"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="S4o-2s-2O4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1313" y="925"/>
+        </scene>
+        <!--Server Ping View Controller - Server Ping-->
+        <scene sceneID="1i8-Pp-e2a">
+            <objects>
+                <viewController id="2U4-zM-Eec" customClass="APDServerPingViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="q6p-Us-Jnt"/>
+                        <viewControllerLayoutGuide type="bottom" id="GPB-xl-XtX"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ePV-jl-2Cu">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="frame_buttons" translatesAutoresizingMaskIntoConstraints="NO" id="OEk-ZH-rAt">
+                                <rect key="frame" x="9" y="101" width="302" height="366"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8vQ-y0-7b8">
+                                <rect key="frame" x="20" y="414" width="280" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="button_ping_off">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="selected" image="button_ping_on"/>
+                                <connections>
+                                    <action selector="pingButtonPressed:" destination="2U4-zM-Eec" eventType="touchUpInside" id="cBy-gc-sdR"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Server Ping" id="7UK-Gv-k0O"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="L2m-Ea-eON" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1313" y="256"/>
+        </scene>
+        <!--Facebook Friends View Controller - Facebook-->
+        <scene sceneID="pJu-Gc-6Ry">
+            <objects>
+                <viewController id="buw-Jm-YaC" customClass="APDFacebookFriendsViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="h03-6I-iwJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="Lbw-g7-fs0"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="izx-A6-9fB">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="frame_buttons" translatesAutoresizingMaskIntoConstraints="NO" id="Q8J-aT-FkZ">
+                                <rect key="frame" x="9" y="86" width="302" height="366"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="reU-dD-o1e">
+                                <rect key="frame" x="66" y="104" width="189" height="306"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="eQ7-Zw-dFW" customClass="APDFacebookFriendCell">
+                                        <rect key="frame" x="0.0" y="22" width="189" height="44"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="eQ7-Zw-dFW" id="yoF-pn-I8h">
+                                            <rect key="frame" x="0.0" y="0.0" width="189" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Daq-cH-G0V">
+                                                    <rect key="frame" x="2" y="2" width="40" height="40"/>
+                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                </imageView>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HfI-XO-kDM">
+                                                    <rect key="frame" x="46" y="12" width="123" height="20"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="nameLabel" destination="HfI-XO-kDM" id="5Cg-x2-YtI"/>
+                                            <outlet property="profPicImage" destination="Daq-cH-G0V" id="a8a-0R-BDb"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="buw-Jm-YaC" id="Vra-90-D1i"/>
+                                    <outlet property="delegate" destination="buw-Jm-YaC" id="eOq-Dh-rkz"/>
+                                </connections>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xRb-E3-iVX">
+                                <rect key="frame" x="20" y="476" width="280" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="button_reload_off">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="selected" image="button_reload_on"/>
+                                <connections>
+                                    <action selector="reloadButtonPressed:" destination="buw-Jm-YaC" eventType="touchUpInside" id="uf2-Ff-ijr"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Facebook" id="5EB-aP-pcY"/>
+                    <connections>
+                        <outlet property="friendsTableView" destination="reU-dD-o1e" id="zvf-2X-fF8"/>
+                        <outlet property="navigationBar" destination="5EB-aP-pcY" id="unm-vZ-ZJP"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Cho-Yz-YR4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1313" y="-428"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="VDD-3r-EcW">
+            <objects>
+                <navigationController definesPresentationContext="YES" id="pgV-OZ-q87" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="zIy-GG-eQ1">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="vXZ-lx-hvc" kind="relationship" relationship="rootViewController" id="OnS-5K-Zcx"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TTt-XB-Uwg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="207" y="107"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="button_dance_off" width="278" height="45"/>
+        <image name="button_dance_on" width="278" height="45"/>
+        <image name="button_facebook_friends_off" width="278" height="45"/>
+        <image name="button_facebook_friends_on" width="278" height="45"/>
+        <image name="button_ping_off" width="278" height="45"/>
+        <image name="button_ping_on" width="278" height="45"/>
+        <image name="button_reload_off" width="278" height="45"/>
+        <image name="button_reload_on" width="278" height="45"/>
+        <image name="button_serverping_off" width="278" height="45"/>
+        <image name="button_serverping_on" width="278" height="45"/>
+        <image name="frame_buttons" width="301" height="366"/>
+        <image name="logo_small" width="203" height="51"/>
+    </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

@@ -6,8 +6,8 @@
 //  Copyright (c) 2014 Adam Proschek. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "APDFacebookFriendRequestDelegate.h"
 
-@interface APDFacebookFriendsViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
+@interface APDFacebookFriendsViewController : UIViewController <UITableViewDataSource, UITableViewDelegate, APDFacebookFriendRequestDelegate>
 
 @end

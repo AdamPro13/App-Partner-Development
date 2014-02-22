@@ -7,8 +7,15 @@
 //
 
 #import "APDServerPingViewController.h"
+#import "APDPingRequestHandler.h"
 
 @interface APDServerPingViewController ()
+
+@property (nonatomic, strong) APDPingRequestHandler *pingRequestHandler;
+
+@property (strong, nonatomic) IBOutlet UIView *popupView;
+@property (strong, nonatomic) IBOutlet UILabel *popupViewTextLabel;
+@property (strong, nonatomic) NSDate *requestStart;
 
 - (IBAction)pingButtonPressed:(UIButton *)sender;
 
@@ -40,12 +47,41 @@
 
 - (IBAction)pingButtonPressed:(UIButton *)sender
 {
+    if (self.pingRequestHandler == nil)
+    {
+        self.pingRequestHandler = [APDPingRequestHandler pingRequestHandlerForSender:self];
+    }
     
+    [self.pingRequestHandler sendRequest];
+    self.requestStart = [NSDate date];
 }
 
 - (void)setUpUI
 {
     self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"background_apppartner"]];
+}
+
+- (void)requestEndedWithData:(id)data forRequest:(NSString *)requestUrl
+{
+    NSTimeInterval responseTime = -[self.requestStart timeIntervalSinceNow];
+    self.requestStart = nil;
+    
+    self.popupViewTextLabel.text = [NSString stringWithFormat:@"Response: %@\nPing Time: %f", data, responseTime];
+    [self.popupView setHidden:NO];
+}
+
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
+{
+    if (!self.popupView.hidden)
+    {
+        for (UITouch *touch in touches)
+        {
+            if (touch.view != self.popupView)
+            {
+                [self.popupView setHidden:YES];
+            }
+        }
+    }
 }
 
 @end

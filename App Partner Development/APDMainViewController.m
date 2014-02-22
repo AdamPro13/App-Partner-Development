@@ -7,6 +7,7 @@
 //
 
 #import "APDMainViewController.h"
+#import <FacebookSDK/Facebook.h>
 
 @interface APDMainViewController ()
 
@@ -38,9 +39,6 @@
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-//    UIBarButtonItem *backButton = [[UIBarButtonItem alloc] initWithTitle:@"Back2" style:UIBarButtonItemStyleBordered target:nil action:nil];
-//    backButton.image = [UIImage imageNamed:@"headerbutton_back_off"];
-//    self.navigationItem.backBarButtonItem = backButton;
 }
 
 @end

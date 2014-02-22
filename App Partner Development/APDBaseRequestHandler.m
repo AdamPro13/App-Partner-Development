@@ -18,12 +18,12 @@
 
 - (void)sendRequestWithString:(NSString *)requestString
 {
-    NSURL *requestUrl = [NSURL URLWithString:requestString];
-    NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:requestUrl];
-    [request setHTTPMethod:@"POST"];
+    NSDictionary *parameters = @{@"Password": @"EGOT"};
+    NSMutableURLRequest *request = [[AFHTTPRequestSerializer serializer] multipartFormRequestWithMethod:@"POST" URLString:requestString parameters:parameters constructingBodyWithBlock:nil error:nil];
+    [request setValue:@"EGOT" forHTTPHeaderField:@"Password"];
     
     AFHTTPRequestOperation *operation = [[AFHTTPRequestOperation alloc] initWithRequest:request];
-    operation.responseSerializer = [AFJSONResponseSerializer serializer];
+    operation.responseSerializer = [AFHTTPResponseSerializer serializer];
     [operation setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation, id responseObject) {
         [self requestDidFinishWithData:responseObject];
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {

@@ -27,6 +27,8 @@
 		50443E0418B92F1A00879698 /* APDFacebookFriendCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 50443E0318B92F1A00879698 /* APDFacebookFriendCell.m */; };
 		50443E0718B9300700879698 /* APDBaseRequestHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 50443E0618B9300700879698 /* APDBaseRequestHandler.m */; };
 		50443E0B18B932B100879698 /* APDPingRequestHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 50443E0A18B932B100879698 /* APDPingRequestHandler.m */; };
+		50443E0F18B9473D00879698 /* APDFacebookFriend.m in Sources */ = {isa = PBXBuildFile; fileRef = 50443E0E18B9473D00879698 /* APDFacebookFriend.m */; };
+		50443E1218B9475200879698 /* APDFacebookFriendRequestHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 50443E1118B9475200879698 /* APDFacebookFriendRequestHandler.m */; };
 		F7458F685E4342E3A1DF0CD3 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F88EC4A3B924CA2AD93835D /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -74,6 +76,11 @@
 		50443E0818B9304100879698 /* APDRequestDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = APDRequestDelegate.h; sourceTree = "<group>"; };
 		50443E0918B932B100879698 /* APDPingRequestHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APDPingRequestHandler.h; sourceTree = "<group>"; };
 		50443E0A18B932B100879698 /* APDPingRequestHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APDPingRequestHandler.m; sourceTree = "<group>"; };
+		50443E0D18B9473D00879698 /* APDFacebookFriend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APDFacebookFriend.h; sourceTree = "<group>"; };
+		50443E0E18B9473D00879698 /* APDFacebookFriend.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APDFacebookFriend.m; sourceTree = "<group>"; };
+		50443E1018B9475200879698 /* APDFacebookFriendRequestHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APDFacebookFriendRequestHandler.h; sourceTree = "<group>"; };
+		50443E1118B9475200879698 /* APDFacebookFriendRequestHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APDFacebookFriendRequestHandler.m; sourceTree = "<group>"; };
+		50443E1318B94D3200879698 /* APDFacebookFriendRequestDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = APDFacebookFriendRequestDelegate.h; sourceTree = "<group>"; };
 		9F88EC4A3B924CA2AD93835D /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -197,6 +204,11 @@
 				50443DAE18B918FD00879698 /* APDFacebookFriendsViewController.m */,
 				50443E0218B92F1900879698 /* APDFacebookFriendCell.h */,
 				50443E0318B92F1A00879698 /* APDFacebookFriendCell.m */,
+				50443E0D18B9473D00879698 /* APDFacebookFriend.h */,
+				50443E0E18B9473D00879698 /* APDFacebookFriend.m */,
+				50443E1018B9475200879698 /* APDFacebookFriendRequestHandler.h */,
+				50443E1118B9475200879698 /* APDFacebookFriendRequestHandler.m */,
+				50443E1318B94D3200879698 /* APDFacebookFriendRequestDelegate.h */,
 			);
 			name = Facebook;
 			sourceTree = "<group>";
@@ -357,7 +369,9 @@
 			files = (
 				50443D8618B90CCA00879698 /* APDAppDelegate.m in Sources */,
 				50443E0718B9300700879698 /* APDBaseRequestHandler.m in Sources */,
+				50443E1218B9475200879698 /* APDFacebookFriendRequestHandler.m in Sources */,
 				50443D8C18B90CCA00879698 /* APDMainViewController.m in Sources */,
+				50443E0F18B9473D00879698 /* APDFacebookFriend.m in Sources */,
 				50443DB218B9190A00879698 /* APDServerPingViewController.m in Sources */,
 				50443DAF18B918FD00879698 /* APDFacebookFriendsViewController.m in Sources */,
 				50443DB518B9191200879698 /* APDDanceViewController.m in Sources */,

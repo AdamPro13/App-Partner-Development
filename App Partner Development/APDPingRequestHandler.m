@@ -14,14 +14,16 @@
 {
     APDPingRequestHandler *handler = [APDPingRequestHandler alloc];
     handler.delegate = sender;
-    handler.requestString = [NSString stringWithFormat:@"%@?password=EGOT", [self baseUrl]];
+    handler.requestString = [self baseUrl];
     
     return handler;
 }
 
 - (void)requestDidFinishWithData:(id)data
 {
+    NSString *responseString = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
     
+    [self.delegate requestEndedWithData:responseString forRequest:self.requestString];
 }
 
 - (void)sendRequest

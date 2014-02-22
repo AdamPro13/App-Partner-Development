@@ -6,12 +6,18 @@
 //  Copyright (c) 2014 Adam Proschek. All rights reserved.
 //
 
+#import <FacebookSDK/Facebook.h>
 #import "APDFacebookFriendsViewController.h"
+#import "APDFacebookFriendCell.h"
+#import "APDFacebookFriendRequestHandler.h"
+#import "APDFacebookFriend.h"
 
 @interface APDFacebookFriendsViewController ()
 
 @property (strong, nonatomic) IBOutlet UITableView *friendsTableView;
 @property (strong, nonatomic) IBOutlet UINavigationItem *navigationBar;
+@property (strong, nonatomic) NSArray *friends;
+@property (strong, nonatomic) APDFacebookFriendRequestHandler *friendRequestHandler;
 
 - (IBAction)reloadButtonPressed:(UIButton *)sender;
 
@@ -34,6 +40,12 @@
 	[self setUpUI];
 }
 
+- (void)viewWillAppear:(BOOL)animated
+{
+    self.friendRequestHandler = [APDFacebookFriendRequestHandler handlerForSender:self];
+    [self.friendRequestHandler requestFriends];
+}
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
@@ -50,27 +62,41 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 0;
+    return [self.friends count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString *CellIdentifier = @"Cell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
+    APDFacebookFriendCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     
-    // Configure the cell...
+    if (cell == nil)
+    {
+        cell = [[APDFacebookFriendCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"Cell"];
+    }
+    
+    cell.facebookFriend = [self.friends objectAtIndex:indexPath.row];
+    cell.nameLabel.text = [NSString stringWithFormat:@"%@ %@", cell.facebookFriend.firstName, cell.facebookFriend.lastName];
+    cell.profilePicture = [cell.facebookFriend getProfilePicture];
     
     return cell;
 }
 
 - (void)setUpUI
-{
-    NSLog(@"Navigation Controller: %@", self.navigationItem.leftBarButtonItem);
+{   
     self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"background_apppartner"]];
     
-//    [self.navigationItem.backBarButtonItem setBackgroundImage:[UIImage imageNamed:@"headerbutton_back_off"] forState:UIControlStateNormal barMetrics:UIBarMetricsDefault];
 }
 
-- (IBAction)reloadButtonPressed:(UIButton *)sender {
+- (IBAction)reloadButtonPressed:(UIButton *)sender
+{
+    [self.friendRequestHandler requestFriends];
 }
+
+- (void)requestReturnedWithFriends:(NSArray *)friends
+{
+    self.friends = friends;
+    [self.friendsTableView reloadData];
+}
+
 @end
